@@ -1,6 +1,6 @@
 import React, { useRef, useEffect, useState, useCallback } from "react";
 
-export function TimerController() {
+export function TimerController({ updatePosition }) {
   const [timer, setTimer] = useState(4000);
   const [pause, setPause] = useState(false);
   let timerRef = useRef();
@@ -15,6 +15,7 @@ export function TimerController() {
 
   useEffect(() => {
     if (timer <= 0) {
+      updatePosition();
       setTimer(4000);
     }
   }, [timer]);

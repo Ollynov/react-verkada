@@ -1,4 +1,4 @@
-import { useEffect, useState, useReducer } from "react";
+import { useState } from "react";
 import image1 from "./../Images/verkada1.png";
 import image2 from "./../Images/verkada2.png";
 import image3 from "./../Images/verkada3.png";
@@ -68,23 +68,20 @@ const ImageVariation3 = () => {
   );
 };
 
-const reducer = (state, action) => {
-  switch (action.type) {
-    case "Decrement":
-      return state - 1000;
-    case "Reset":
-      return 8000;
-    default:
-      return state;
-  }
-};
-
 const Carousel = () => {
   const [position, setPosition] = useState(1);
 
+  const updatePosition = () => {
+    if (position === 3) {
+      setPosition(1);
+    } else {
+      setPosition((prev) => prev + 1);
+    }
+  };
+
   return (
     <div className="w-[518px] bg-green-700 h-full relative">
-      <TimerController />
+      <TimerController updatePosition={updatePosition} />
       {position === 1 && <ImageVariation1 />}
       {position === 2 && <ImageVariation2 />}
       {position === 3 && <ImageVariation3 />}

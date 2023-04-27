@@ -11,7 +11,7 @@ const Circle = () => {
         r="66"
         stroke="#FF9900"
         opacity=".1"
-        stroke-width="30"
+        strokeWidth="30"
         fill="none"
       />
     </svg>

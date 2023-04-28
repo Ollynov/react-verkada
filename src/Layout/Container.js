@@ -11,7 +11,7 @@ const Circle = () => {
         r="66"
         stroke="#FF9900"
         opacity=".1"
-        stroke-width="30"
+        strokeWidth="30"
         fill="none"
       />
     </svg>
@@ -24,7 +24,7 @@ function Container({ children }) {
       <Circle />
       <div
         id="main-content"
-        className="bg-green-200 w-full my-28  xl:w-[1176px] xl:mx-auto 2xl:ml-[240px] xl:mt-[197px] h-[1060px] lg:h-[530px] flex flex-col lg:flex-row justify-between"
+        className="  px-4 md:px-8 xl:px-0 mx-auto my-28  xl:w-[1176px] xl:mx-auto 2xl:ml-[240px] xl:mt-[197px] h-[1060px] lg:h-[530px] flex flex-col lg:flex-row justify-between"
       >
         {children}
       </div>

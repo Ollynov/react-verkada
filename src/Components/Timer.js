@@ -40,15 +40,15 @@ export function TimerController({ position, setPosition }) {
 
   const decreaseTimer = () => setTimer((prev) => prev - 10);
 
-  const updatePosition = (position = false) => {
-    if (!position) {
+  const updatePosition = (manualPositionSelected = false) => {
+    if (!manualPositionSelected) {
       if (position === 3) {
         setPosition(1);
       } else {
         setPosition((prev) => prev + 1);
       }
     } else {
-      setPosition(position);
+      setPosition(manualPositionSelected);
     }
   };
 

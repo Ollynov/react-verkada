@@ -25,7 +25,7 @@ const Carousel = () => {
         {position === 2 && <ImageVariation2 />}
         {position === 3 && <ImageVariation3 />}
       </div>
-      <TimerController updatePosition={updatePosition} />
+      <TimerController position={position} updatePosition={updatePosition} />
     </>
   );
 };

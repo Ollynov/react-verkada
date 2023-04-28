@@ -1,4 +1,5 @@
 import React, { useRef, useEffect, useState, useCallback } from "react";
+import { Play, Pause } from "./../Icons/PlayPause";
 
 export function TimerController({ updatePosition }) {
   const [timer, setTimer] = useState(4000);
@@ -30,9 +31,9 @@ export function TimerController({ updatePosition }) {
   };
 
   return (
-    <div>
+    <div className="fixed right-[60px] top-7 2xl:top-[400px]">
       <div>{timer}</div>
-      <button onClick={handlePause}>{pause ? "Run" : "Pause"}</button>
+      <button onClick={handlePause}>{pause ? <Play /> : <Pause />}</button>
     </div>
   );
 }

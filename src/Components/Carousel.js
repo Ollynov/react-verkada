@@ -9,14 +9,6 @@ import {
 const Carousel = () => {
   const [position, setPosition] = useState(1);
 
-  const updatePosition = () => {
-    if (position === 3) {
-      setPosition(1);
-    } else {
-      setPosition((prev) => prev + 1);
-    }
-  };
-
   return (
     <>
       {" "}
@@ -25,7 +17,7 @@ const Carousel = () => {
         {position === 2 && <ImageVariation2 />}
         {position === 3 && <ImageVariation3 />}
       </div>
-      <TimerController position={position} updatePosition={updatePosition} />
+      <TimerController position={position} setPosition={setPosition} />
     </>
   );
 };

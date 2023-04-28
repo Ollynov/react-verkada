@@ -20,7 +20,7 @@ const Carousel = () => {
   return (
     <>
       {" "}
-      <div className="w-[518px] bg-green-700 h-full relative">
+      <div className="w-[518px] h-full relative">
         {position === 1 && <ImageVariation1 />}
         {position === 2 && <ImageVariation2 />}
         {position === 3 && <ImageVariation3 />}

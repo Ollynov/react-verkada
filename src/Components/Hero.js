@@ -2,7 +2,7 @@ import StandardButton from "./StandardButton";
 
 const Hero = () => {
   return (
-    <div className="w-[416px] bg-slate-300 h-full pt-12 lg:pt-[104px]">
+    <div className="w-[416px] h-full pt-12 lg:pt-[104px]">
       <div className="mb-4 text-sm text-[#929A9F] uppercase">
         Lorem ipsum dolor
       </div>
